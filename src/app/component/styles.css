@@ -1,0 +1,569 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-grey-950: #0d0d0d;
+  --color-grey-900: #1d1d1d;
+  --color-grey-800: #242424;
+  --color-grey-700: #2b2b2b;
+  --color-grey-650: #353536;
+  --color-grey-600: #3e3d3d;
+  --color-grey-500: #69696c;
+  --color-grey-400: #aaa;
+  --color-grey-300: #c2c2c2;
+  --color-grey-200: #dbdbdb;
+  --color-grey-100: #e8e8e8;
+  --color-grey-50: #f6f6f6;
+  --color-blue-950: #060913;
+  --color-blue-900: #0e152a;
+  --color-blue-800: #1c2954;
+  --color-blue-700: #2a3e7f;
+  --color-blue-600: #3852a9;
+  --color-blue-500: #526dc6;
+  --color-blue-400: #758bd1;
+  --color-blue-300: #97a8dd;
+  --color-blue-200: #bac5e8;
+  --color-blue-100: #dce2f4;
+  --color-blue-50: #eceff9;
+  --color-green-950: #0c1108;
+  --color-green-900: #182211;
+  --color-green-800: #2e4120;
+  --color-green-700: #476430;
+  --color-green-600: #5c833f;
+  --color-green-500: #75a550;
+  --color-green-400: #8fb96f;
+  --color-green-300: #accb95;
+  --color-green-200: #c7dcb7;
+  --color-green-100: #e4eedd;
+  --color-green-50: #f2f7ee;
+  --color-accent-950: #0d0d0c;
+  --color-accent-900: #181716;
+  --color-accent-800: #302d2c;
+  --color-accent-700: #484441;
+  --color-accent-600: #615a57;
+  --color-accent-500: #79716d;
+  --color-accent-400: #958d89;
+  --color-accent-300: #afa9a6;
+  --color-accent-200: #cac6c4;
+  --color-accent-100: #e4e2e1;
+  --color-accent-50: #f3f2f2;
+  --color-red-950: #140606;
+  --color-red-900: #270c0c;
+  --color-red-800: #4e1818;
+  --color-red-700: #762323;
+  --color-red-600: #9d2f2f;
+  --color-red-500: #b53b3b;
+  --color-red-400: #c66767;
+  --color-red-300: #d59b9b;
+  --color-red-200: #e1c4c4;
+  --color-red-100: #ece4e4;
+  --color-red-50: #f6f2f2;
+}
+
+html, :host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: var(--tw-empty, /*!*/ /*!*/);
+  --tw-pan-y: var(--tw-empty, /*!*/ /*!*/);
+  --tw-pinch-zoom: var(--tw-empty, /*!*/ /*!*/);
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: var(--tw-empty, /*!*/ /*!*/);
+  --tw-gradient-via-position: var(--tw-empty, /*!*/ /*!*/);
+  --tw-gradient-to-position: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
+  --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
+  --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
+  --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
+  --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
+  --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
+}
+
+::before, ::after {
+  --tw-content: '';
+}
+
+:root {
+  color-scheme: dark;
+}
+
+.nav-nav {
+  padding: 23px;
+  display: flex;
+  align-items: center;
+ flex-direction: row;
+ justify-content: center;
+}
+
+.ab4ccn {
+  display: inline-flex;
+  height: 50px;
+  align-items: center;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  background-color: rgb(36, 36, 36);
+  height: 46px;
+  width: 30%;
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1), border-color 200ms cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 200ms cubic-bezier(0.4, 0, 0.2, 1), fill 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke 200ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1), transform 200ms cubic-bezier(0.4, 0, 0.2, 1), filter 200ms cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-nav2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  height: 46px;
+  width: 10%;
+}
+.hyjy6{
+  margin-right: 0.5rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-left: 1.5rem;
+  margin-right: 0px;
+  padding-left: 1rem;
+}
+.s5{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.css-sppnag{
+  display: inline-block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    height: 13px;
+    width: 13px;
+    vertical-align: middle;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.css-3mqgs4 {
+  height: 100%;
+  min-width: 0px;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  background-color: transparent;
+  padding-bottom: 16.5px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 16.5px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  -webkit-filter: none;
+  filter: none;
+  padding-top: 14.5px;
+  padding-bottom: 14.5px;
+  padding-left: 10px;
+  font-weight: 400;
+}
+.css-14eb9zo {
+  margin-left: 0.5rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 1.5rem;
+  z-index: 30;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+}
+.css-1wsgyw {
+  --tw-text-opacity: 1;
+  color: rgb(105 105 108 / var(--tw-text-opacity));
+}
+css-1g5mdqj {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  height: 1rem;
+  width: 1rem;
+}
+.css-1t80c51 {
+  display: block;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  color: var(--color-text-default);
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.css-rj0dda {
+  display: block;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  color: var(--color-text-muted);
+  margin-right: 10px;
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.css-1bby9dw {
+  position: relative;
+  height: 38px;
+  cursor: pointer;
+  border-radius: 300px;
+  background-color: var(--color-button-primary);
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--color-text-contrast);
+  --tw-ring-inset: inset;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  position: relative;
+  z-index: 20;
+  display: none;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.css-kk0bxe {
+  display: block;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  color: inherit;
+}
+.css-1kxuhr3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0;
+}
+.css-1k21jys {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 300px;
+  --tw-ring-inset: inset;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  margin: 0 1px 1px -2px;
+}
+.css-5g654f {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 9999px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.css-1e2vr6l {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  height: 19px;
+  width: 15px;
+}
+.css-185iwmr {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  width: 11px;
+}
+.css-1bby9dw {
+  position: relative;
+  height: 38px;
+  cursor: pointer;
+  border-radius: 300px;
+  background-color: var(--color-button-primary);
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--color-text-contrast);
+  --tw-ring-inset: inset;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  position: relative;
+  z-index: 20;
+  display: none;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.css-kk0bxe {
+  display: block;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  color: inherit;
+}
+.css-1kxuhr3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0;
+}
+.css-1k21jys {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 300px;
+  --tw-ring-inset: inset;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+  margin: 0 1px 1px -2px;
+}
+.css-1ub9xiv {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.css-9kakj6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+.css-hp0xkh {
+  text-align: center;
+  font-family: "GT Super Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 24px;
+  line-height: 28px;
+}
+.css-ru9vss {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 47px;
+  width: 96px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+.css-ru9vss {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 47px;
+  width: 96px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-family: Favorit, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+
+.css-hp0xkh {
+  text-align: center;
+  font-family: "GT Super Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 24px;
+  line-height: 28px;
+}
+.css-173t9o6 {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 185px;
+  text-align: center;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(170 170 170 / var(--tw-text-opacity));
+  font-size: 14px;
+  line-height: 18px;
+}

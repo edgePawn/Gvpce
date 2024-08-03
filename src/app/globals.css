@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the entire page has a black background */
+html,
+body,
+#__next,
+main {
+  background-color :#17120E ;
+  @apply text-white min-h-screen;
+}
+.total{
+  background-color :#111113;
+  @apply text-white min-h-screen;
+}
+:root {
+  --foreground-rgb: 255, 255, 255; /* Default to white text */
+  --background-start-rgb: 0, 0, 0; /* Black background */
+  --background-end-rgb: 0, 0, 0; /* Black background */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* White text in dark mode */
+    --background-start-rgb: 0, 0, 0; /* Black background */
+    --background-end-rgb: 0, 0, 0; /* Black background */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb)); /* Apply foreground color */
+  background-color: rgb(var(--background-start-rgb)); /* Apply background color */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
