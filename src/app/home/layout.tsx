@@ -1,11 +1,9 @@
-
 import "./globals.css";
-import Navbar from '../app/component/NavBar';
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="total" >
-        <Navbar />
+      <body className="total">
+
         {children}
       </body>
     </html>

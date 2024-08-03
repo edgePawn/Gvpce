@@ -137,7 +137,8 @@ html, :host {
   display: flex;
   align-items: center;
  flex-direction: row;
- justify-content: center;
+ justify-content: space-between;
+ 
 }
 
 .ab4ccn {
@@ -163,7 +164,7 @@ html, :host {
   line-height: 17px;
   font-weight: 400;
   height: 46px;
-  width: 10%;
+  width: 100%;
 }
 .hyjy6{
   margin-right: 0.5rem;
